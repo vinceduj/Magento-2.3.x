@@ -1,5 +1,10 @@
 # Change Log
 
+## [2.0.0] 2019-03-07
+
+- Code : Implementation du Csrf (incompatible avec PHP < 7.1)
+- Composer: PHP 7.1.3+ (Magento 2.3)
+
 ## [1.0.11] 2019-02-06
 
 ### Corrections
