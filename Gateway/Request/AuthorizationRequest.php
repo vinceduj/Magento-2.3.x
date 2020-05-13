@@ -127,11 +127,11 @@ class AuthorizationRequest implements BuilderInterface
         } else {
             $values['PBX_TOTAL'] = sprintf('%03d', round($orderAmount * $amountScale));
             switch ($payment->getPayboxAction()) {
-                case Paybox_Epayment_Model_Payment_Abstract::PBXACTION_MANUAL:
+                case \Paybox\Epayment\Model\Payment\AbstractPayment::PBXACTION_MANUAL:
                     $values['PBX_AUTOSEULE'] = 'O';
                     break;
 
-                case Paybox_Epayment_Model_Payment_Abstract::PBXACTION_DEFERRED:
+                case \Paybox\Epayment\Model\Payment\AbstractPayment::PBXACTION_DEFERRED:
                     $delay = (int) $payment->getConfigData('delay');
                     if ($delay < 1) {
                         $delay = 1;
